@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  flex-direction: column; */
+}
+header {
+  width: 95%;
+}
+
+nav {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px auto;
+  width: 100%;
+  min-height: 60px;
+  padding: 0px 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: rgb(32, 35, 41);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+  color: #ffcc00;
+  text-shadow: 1px 1px 2px black;
+}
+
+h1 {
+  color: rgb(32, 35, 41);
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 5.625rem;
+}
+.content {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 4.5rem 0px;
+  background: rgb(39, 43, 51);
+  min-height: calc(-60px + 50vh);
+}
+
+.all-cards {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1920px;
+}
+
+.artist-card {
+  width: 600px;
+  height: 220px;
+  display: flex;
+  overflow: hidden;
+  background: rgb(60, 62, 68);
+  border-radius: 0.5rem;
+  margin: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.artist-image {
+  flex: 2 1 0%;
+  width: 100%;
+}
+
+.artist-link {
+  color: white;
+  text-decoration: none;
+  font-size: 2 rem;
+
+}
+.inner-Content {
+  flex: 3 1 0%;
+  position: relative;
+  padding: 0.75rem;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the button with keyframe animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: #f12711;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #f5af19;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #f5af19;
+  }
+}
+
+/* Style the button */
+.artist-button {
+  display: block;
+  width: 200px;
+  margin: 2rem auto; /* Center and space out the button */
+  padding: 1rem;
+  background-color: #3341ff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.artist-button:hover {
+  background-color: #0003c7;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+  background: rgb(32, 35, 41);
+  color: rgb(158, 158, 158);
+  padding: 1 rem 0px;
+  min-height: calc(120px);
+  width: 100%;
+}
+
+#art-name {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}

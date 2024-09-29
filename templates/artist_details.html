@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Groupie Tracker - Artist Details</title>
+    <link rel="stylesheet" href="/styles/artist.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- <a>Logo</a> -->
+        <ul>
+          <li><a href="/">Groupie Tracker</a></li>
+          <!-- <li><a href="/about">About</a></li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h1>Artist</h1>
+    </section>
+
+    <section class="content">
+      <div class="all-cards">
+        <article class="artist-card">
+          <h2>{{.Artist.Name}}</h2>
+          <img src="{{.Artist.Image}}" alt="{{.Artist.Name}}" />
+          <h3>Members: {{range .Artist.Members}}{{.}}, {{end}}</h3>
+          <p>Creation Date: {{.Artist.CreationDate}}</p>
+
+          <p>First Album: {{.Artist.FirstAlbum}}</p>
+
+          <h2>Concert Dates and Locations</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{range .ConcertDetails}}
+              <tr>
+                <td>{{index . 0}}</td>
+                <td>{{index . 1}}</td>
+              </tr>
+              {{end}}
+            </tbody>
+          </table>
+
+          <h2>Artist Relations</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Related Artist</th>
+                <th>Dates</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{range $artistID, $dates := .ArtistRelations}}
+              <tr>
+                <td>{{ $artistID }}</td>
+                <td>{{range $dates}}{{.}}, {{end}}</td>
+              </tr>
+              {{end}}
+            </tbody>
+          </table>
+
+          <a class="back-link" href="/">Back</a>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2024 Groupie Tracker. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
